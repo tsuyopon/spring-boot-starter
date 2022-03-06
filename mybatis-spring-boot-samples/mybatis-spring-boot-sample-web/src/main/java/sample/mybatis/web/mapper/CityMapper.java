@@ -27,6 +27,7 @@ import sample.mybatis.web.domain.City;
 @Mapper
 public interface CityMapper {
 
+  // findByStateの引数には /cities/{state} で指定した stateがわたる。レスポンスは@Selectで指定された結果が帰る。
   @Select("select id, name, state, country from city where state = #{state}")
   City findByState(@Param("state") String state);
 

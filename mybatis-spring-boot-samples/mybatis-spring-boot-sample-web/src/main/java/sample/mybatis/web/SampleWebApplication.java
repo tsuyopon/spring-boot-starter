@@ -18,6 +18,8 @@ package sample.mybatis.web;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+// mainを含むクラスには@SpringBootApplicationを付与する。
+// これによって、SpringBootが@Componentアノテーションが付与されているクラスを自動的に読み込むようになる。
 @SpringBootApplication
 public class SampleWebApplication {
 

@@ -1,3 +1,12 @@
+試してみたもの
+- mybatis-spring-boot-sample-web
+  - DBへの接続を行う単純なAPIサンプル
+
+-----------------------
+
+
+- https://mybatis.org/spring-boot-starter/
+
 # MyBatis integration with Spring Boot
 
 [![Build Status](https://travis-ci.org/mybatis/spring-boot-starter.svg)](https://travis-ci.org/mybatis/spring-boot-starter)

@@ -23,16 +23,19 @@ import org.springframework.web.bind.annotation.RestController;
 import sample.mybatis.web.domain.City;
 import sample.mybatis.web.mapper.CityMapper;
 
+// @RestControllerは@Controllerを含み、その中に@Componentを含んでいる。
 @RequestMapping("/cities")
 @RestController
 public class CityRestController {
 
+  // DIとして必要なメンバーを定義する。finalで定義する
   private final CityMapper cityMapper;
 
   public CityRestController(CityMapper cityMapper) {
     this.cityMapper = cityMapper;
   }
 
+  // /cities/<state> でアクセス可能になる。
   @GetMapping("{state}")
   City getCity(@PathVariable String state) {
     return cityMapper.findByState(state);
